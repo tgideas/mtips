@@ -57,13 +57,6 @@ mobile frontend tips
    问题描述：播放后一音频会打断前一音频，而不会同步播
  环境与频率：android
    解决办法：合理降权与选择不同的音频，不同音频营造尽量一致的氛围。
-   <pre>
-   //play and pause it once
-   document.addEventListener('touchstart', function () {
-   document.getElementsByTagName('audio')[0].play();
-   document.getElementsByTagName('audio')[0].pause();
-   });
-   </pre>
 
 ### #8 不支持局部滚动
 
@@ -71,13 +64,6 @@ mobile frontend tips
  环境与频率：android 2.X
    解决办法：1、巧用布局 利用body(html)全局滚动
              2、iscroll、自写js控制translate、scrollTop模拟
-   <pre>
-   //play and pause it once
-   document.addEventListener('touchstart', function () {
-   document.getElementsByTagName('audio')[0].play();
-   document.getElementsByTagName('audio')[0].pause();
-   });
-   </pre>
 
 ### #9 input:password 密码输入框出现悬浮怪异输入框
 
