@@ -13,7 +13,7 @@ Mbug is a bug list for front-end development of mobile
    测试环境：部分android机型
    解决办法：不使用transform属性。translate用top、margin等属性替代
    
-### ## 父元素设置position: fixed，子元素设置position: absolute，如果父元素/子元素还设置了overflow: hidden 则重现，页面往下滚动，触发position: fixed的特性时，才会出现这个bug，在最顶不会出现。
+### ## ::after在手机中使用animation无效
 
    问题描述：::after在手机不支持animation
    解决办法：不用伪元素改为普通元素
