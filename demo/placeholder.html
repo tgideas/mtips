@@ -10,45 +10,44 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>H5Hacks - Android4.x placeholder文字偏上</title>
-    <link rel="stylesheet" href="../assets/rachet/css/rachet.min.css"/>
-    <style>
-        .demo {height:40px;margin:20px auto;padding:5px;line-height:40px;color:#fff;font-weight:bold;text-align:center;}
-        .demo1 {
-        
-        }
-        input{width:95%;padding-left:5px;padding-right:5px;}
-    </style>
+    <link rel="stylesheet" href="../assets/ratchet/css/ratchet.min.css"/>
+    <script src="../assets/ratchet/js/ratchet.min.js"></script>
 </head>
 <body>
     <header class="bar bar-nav">
-        <a class="icon icon-left-nav pull-left"></a>
+        <a href="../index.html" data-transition="slide-out" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
         <h1 class="title">placeholder文字偏上</h1>
     </header>
 
-    <div class="segmented-control">
-        <a class="control-item active" href="#item1mobile">
-            Thing one
-        </a>
-        <a class="control-item" href="#item2mobile">
-            Thing two
-        </a>
-        <a class="control-item" href="#item3mobile">
-            Thing three
-        </a>
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active" href="#sc1">环境与频率</a>
+            <a class="control-item" href="#sc2">问题描述</a>
+            <a class="control-item" href="#sc3">解决办法</a>
         </div>
+
+    </div>
+
+    <div class="content">
+        <style>
+            .sc{padding:10px;}
+        </style>
         <div class="card">
-            <span id="item1mobile" class="control-content active">Item 1</span>
-            <span id="item2mobile" class="control-content">Item 2</span>
-            <span id="item3mobile" class="control-content">Item 3</span>
+            <div id="sc1" class="control-content sc active">
+                Android 4.x 部分机型
+            </div>
+            <div id="sc2" class="control-content sc">placeholder属性设置的文字向上偏移的厉害</div>
+            <div id="sc3" class="control-content sc">line-height:normal</div>
         </div>
+
+        <div class="content-padded"><h4>示例</h4></div>
+        <div class="content-padded">
+            <form>
+                <input type="text" placeholder="placeholder android 4.x文字偏上"/>
+            </form>
+        </div>
+
     </div>
-
-    <h3>示例</h3>
-
-    <div class="card">
-        <input type="text" placeholder="placeholder android 4.x文字偏上"/>
-    </div>
-
-
 </body>
 </html>
