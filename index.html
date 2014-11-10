@@ -8,41 +8,63 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
 
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="assets/ratchet/css/ratchet.min.css" rel="stylesheet"/>
+    <!-- Include the compiled XO CSS -->
+    <link href="assets/xo/css/xo.min.css" rel="stylesheet"/>
     <link href="assets/h5hacks/css/common.css" rel="stylesheet"/>
 
-    <!-- Include the compiled Ratchet JS -->
-    <script src="assets/ratchet/js/ratchet.min.js"></script>
   </head>
-  <body>
+  <body data-viewdir="demo/html/">
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav">
-      <h1 class="title">H5 Hacks</h1>
-    </header>
 
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
-      <p class="content-padded">H5页面坑与技巧不完整收录</p>
-      <div class="card">
-        <ul class="table-view">
-          <li class="table-view-cell">
-            <a data-ignore="push" class="push-right" href="demo/android-2-3-border-radius.html">
-              <strong>border-radius失效</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a data-ignore="push" class="push-right" href="demo/placeholder.html">
-              <strong>placeholder字体偏上</strong>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!--S 遮罩-->
+    <!--页面切换过程中遮罩用于屏蔽用户操作-->
+    <div id="xoview-common-mask" class="xmask hide"></div>
+    <!--E 遮罩-->
 
+    <!--S loader-->
+    <div id="xoview-common-loader" class="xo_loader"><div class="xo_loader_animate"><span></span><span></span><span></span></div></div>
+    <!--E loader-->
+    
+    <!-- Include the compiled XO JS -->
+    <script src="assets/xo/js/xo.bundle.js"></script>
+    <!-- App Biz code -->
+    <script src="assets/js/view/home/index.js"></script>
+    <script>
+        $(document).ready(function(){
+            XO.App.init({
+                debug:true,
+                defaultAnimation:'slideleft'
+            });
+            //applicationCache.addEventListener('cached', function(){ init(); });
+            //applicationCache.addEventListener('noupdate', function(){ init(); });
+            //applicationCache.addEventListener('updateready', function(){ init(); });
+            //applicationCache.addEventListener('error', function(){ init(); });
+        
+            $(document).on('click','.segmented-control .control-item',function(e){
+                var $this=$(this),
+                    clOn = 'active';
+                if($this.hasClass(clOn)){
+                    return;
+                }
+                
+                var href = this.getAttribute('data-href'),
+                    $page = $this.parents('.xpage'),
+                    $items = $page.find('.control-content');
+                    $navs = $page.find('.control-item');
+
+                $navs.removeClass(clOn);
+                $this.addClass(clOn);
+
+                $items.removeClass(clOn);
+                $(href).addClass(clOn);
+
+            });
+        });
+    </script>
   </body>
 </html>
