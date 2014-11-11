@@ -4,6 +4,26 @@ XO.View.define({
     version:'20131209',
     init:function(){
         XO.warn('View inited:'+this.id);
+        $(document).on('click','.segmented-control .control-item',function(e){
+            var $this=$(this),
+                clOn = 'active';
+            if($this.hasClass(clOn)){
+                return;
+            }
+            
+            var href = this.getAttribute('data-href'),
+                $page = $this.parents('.xpage'),
+                $items = $page.find('.control-content');
+                $navs = $page.find('.control-item');
+
+            $navs.removeClass(clOn);
+            $this.addClass(clOn);
+
+            $items.removeClass(clOn);
+            $items.eq($this.index()).addClass(clOn);
+
+        });
+
     },
     //模板已经渲染到页面中
     onRender:function(){

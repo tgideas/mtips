@@ -1,5 +1,5 @@
 /*!
- *  xo v1.0.1 - 11/10/2014
+ *  xo v1.0.1 - 11/11/2014
  *  http://xsin.in/xo
  *  Copyright (c) 2014 XSIN Studio - Licensed MIT 
  */
@@ -842,7 +842,7 @@
         $body:$(document.body),
         $win:$(window),
         EVENT:{},//EVENT literary
-        EVENT_NS:'.XO',//name
+        EVENT_NS:'_XO',//name
         Base:{},//Base namespace
         LS:localStorage,
         toHtml:function(tpl,obj,ext){
@@ -2071,10 +2071,10 @@ XO('support',function($,C){
 XO('Event',function($){
     this.on= function(fullName,handler){
         if(arguments.length<=2){
-            XO.$body.bind(fullName,handler);
+            XO.$body.on(fullName,handler);
             return;
         }
-        $(arguments[0]).bind(arguments[1],arguments[2]);
+        $(arguments[0]).on(arguments[1],arguments[2]);
     };
     this.trigger = function(fullName,args){
         if(arguments.length<=2){
@@ -2095,6 +2095,7 @@ XO('Event',function($){
     };
 
 });
+
 //plugin base module
 XO('plugin',function($,C){
     //插件的公共方法
@@ -2387,7 +2388,8 @@ XO('View',function($,C){
             };
             this.$el = $(this.el);
             this.animation = this.animation||(this.el.getAttribute[C.ATTR.ANIMATION]||XO.App.opts.defaultAnimation);
-            XO.Event.trigger(this,XO.EVENT.View.Inited,[this]);
+            //XO.Event.trigger(this,XO.EVENT.View.Inited,[this]);
+            XO.Event.trigger(XO.EVENT.View.Inited,[this]);
             this.onRender&&this.onRender.call(this);
         },
         initFromRemote:function(cbk){

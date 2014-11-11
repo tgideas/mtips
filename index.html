@@ -15,7 +15,11 @@
 
     <!-- Include the compiled XO CSS -->
     <link href="assets/xo/css/xo.min.css" rel="stylesheet"/>
-    <link href="assets/h5hacks/css/common.css" rel="stylesheet"/>
+    <link href="assets/mtips/css/common.css" rel="stylesheet"/>
+
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/default.min.css"/>-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/solarized_dark.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
 
   </head>
   <body data-viewdir="demo/html/">
@@ -36,34 +40,20 @@
     <script src="assets/js/view/home/index.js"></script>
     <script>
         $(document).ready(function(){
+            XO.Event.on(XO.EVENT.View.Inited,function(e,view){
+                view.$el.find('.code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
             XO.App.init({
                 debug:true,
-                defaultAnimation:'slideleft'
+                defaultAnimation:'none'
             });
             //applicationCache.addEventListener('cached', function(){ init(); });
             //applicationCache.addEventListener('noupdate', function(){ init(); });
             //applicationCache.addEventListener('updateready', function(){ init(); });
             //applicationCache.addEventListener('error', function(){ init(); });
-        
-            $(document).on('click','.segmented-control .control-item',function(e){
-                var $this=$(this),
-                    clOn = 'active';
-                if($this.hasClass(clOn)){
-                    return;
-                }
-                
-                var href = this.getAttribute('data-href'),
-                    $page = $this.parents('.xpage'),
-                    $items = $page.find('.control-content');
-                    $navs = $page.find('.control-item');
-
-                $navs.removeClass(clOn);
-                $this.addClass(clOn);
-
-                $items.removeClass(clOn);
-                $(href).addClass(clOn);
-
-            });
+                    
         });
     </script>
   </body>

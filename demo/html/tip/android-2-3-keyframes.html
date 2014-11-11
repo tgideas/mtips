@@ -1,0 +1,45 @@
+<div id="xoview-tip-android-2-3-keyframes" class="xpage">
+    <header class="bar bar-nav">
+        
+        <a href="#home" data-back="home" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">Android2.3.x keyframes动画问题</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active" data-href="0">环境与频率</a>
+            <a class="control-item" data-href="1">问题描述</a>
+            <a class="control-item" data-href="2">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                Android 2.3.x
+            </div>
+            <div class="control-content sc">animation动画不起作用</div>
+            <div  class="control-content sc">
+                <p>
+                    100%要留一帧空出来。在100%之前写一个最后值 99%那里写。2.3系统的动画才会动。
+                </p>
+                <pre>
+                    <code class="code">
+@-webkit-keyframes wave1{
+    0%{ opacity:0;}
+    8.33%{ opacity:.8;}
+    99%{opacity:1;}
+    100%{}/* 空的一帧  */
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>

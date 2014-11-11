@@ -1437,6 +1437,335 @@ select {
 .icon-left:before {
   content: '\e822';
 }
+/**
+ * yue.css
+ *
+ * yue.css is designed for readable content.
+ *
+ * Copyright (c) 2013 - 2014 by Hsiaoming Yang.
+ */
+
+.yue {
+  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #444443;
+}
+
+.windows .yue {
+  font-size: 16px;
+  font-family: "Georgia", "SimSun", sans-serif;
+}
+
+.yue ::-moz-selection {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.yue ::selection {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.yue h1,
+.yue h2,
+.yue h3,
+.yue h4,
+.yue h5,
+.yue h6 {
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
+  color: #222223;
+}
+
+.yue h1 {
+  font-size: 1.8em;
+  margin: 0.67em 0;
+}
+
+.yue > h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.yue h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+.yue h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+.yue h4,
+.yue h5,
+.yue h6 {
+  font-size: 1em;
+  margin: 1.6em 0 1em 0;
+}
+
+.yue h6 {
+  font-weight: 500;
+}
+
+.yue p {
+  margin-top: 0;
+  margin-bottom: 1.46em;
+}
+
+.yue a {
+  color: #111;
+  word-wrap: break-word;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+}
+
+.yue a:hover {
+  color: #555;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
+  text-decoration-color: rgba(0, 0, 0, 0.6);
+}
+
+.yue strong,
+.yue b {
+  font-weight: 700;
+  color: #222223;
+}
+
+.yue em,
+.yue i {
+  font-style: italic;
+  color: #222223;
+}
+
+.yue img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.2em 0;
+}
+
+.yue a img {
+  /* Remove border on IE */
+  border: none;
+}
+
+.yue figure {
+  position: relative;
+  clear: both;
+  outline: 0;
+  margin: 10px 0 30px;
+  padding: 0;
+  min-height: 100px;
+}
+
+.yue figure img {
+  display: block;
+  max-width: 100%;
+  margin: auto auto 4px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.yue figure figcaption {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666665;
+}
+
+.yue figure figcaption a {
+  text-decoration: none;
+  color: #666665;
+}
+
+.yue hr {
+  display: block;
+  width: 14%;
+  margin: 40px auto 34px;
+  border: 0 none;
+  border-top: 3px solid #dededc;
+}
+
+.yue blockquote {
+  margin: 0 0 1.64em 0;
+  border-left: 3px solid #dadada;
+  padding-left: 12px;
+  color: #666664;
+}
+
+.yue blockquote a {
+  color: #666664;
+}
+
+.yue ul,
+.yue ol {
+  margin: 0 0 24px 6px;
+  padding-left: 16px;
+}
+
+.yue ul {
+  list-style-type: square;
+}
+
+.yue ol {
+  list-style-type: decimal;
+}
+
+.yue li {
+  margin-bottom: 0.2em;
+}
+
+.yue li ul,
+.yue li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+
+.yue li ul {
+  list-style-type: disc;
+}
+
+.yue li ul ul {
+  list-style-type: circle;
+}
+
+.yue li p {
+  margin: 0.4em 0 0.6em;
+}
+
+.yue .unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yue code,
+.yue tt {
+  color: #808080;
+  font-size: 0.96em;
+  background-color: #f9f9f7;
+  padding: 1px 2px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  word-wrap: break-word;
+}
+
+.yue pre {
+  margin: 1.64em 0;
+  padding: 7px;
+  border: none;
+  border-left: 3px solid #dadada;
+  padding-left: 10px;
+  overflow: auto;
+  line-height: 1.5;
+  font-size: 0.96em;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #4c4c4c;
+  background-color: #f9f9f7;
+}
+
+.yue pre code,
+.yue pre tt {
+  color: #4c4c4c;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.yue table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.5em;
+  font-size: 0.96em;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.yue th,
+.yue td {
+  text-align: left;
+  padding: 4px 8px 4px 10px;
+  border: 1px solid #dadada;
+}
+
+.yue td {
+  vertical-align: top;
+}
+
+.yue tr:nth-child(even) {
+  background-color: #efefee;
+}
+
+.yue iframe {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.yue figure iframe {
+  margin: auto;
+}
+
+.yue table pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+@media (min-width: 1100px) {
+  .yue blockquote {
+    margin-left: -24px;
+    padding-left: 20px;
+    border-width: 4px;
+  }
+
+  .yue blockquote blockquote {
+    margin-left: 0;
+  }
+
+  .yue figure img {
+    margin: 0 0 4px;
+  }
+
+  .yue figure figcaption:before {
+    width: 25%;
+    margin-left: 75%;
+    border-top: 1px solid #dededc;
+    display: block;
+    content: "";
+    margin-bottom: 10px;
+  }
+
+  .yue figure figcaption {
+    position: absolute;
+    left: -172px;
+    width: 150px;
+    top: 0;
+    text-align: right;
+    margin-top: 0;
+  }
+}
+.bar .icon{
+    padding:5px;
+    margin-top:5px;
+    font-size:26px;
+    margin-right:-5px;
+}
+.navigate-right .media-object{
+    max-width:25%;
+}
+.media-body h3{
+    font-size:18px;
+    font-weight:normal;
+}
+h1 .icon,h2 .icon,h3 .icon,h4 .icon{
+    color:#777;
+}
 body{
     -webkit-text-size-adjust:100%;
     -webkit-user-select:none;
@@ -1458,7 +1787,9 @@ input, textarea{
     -webkit-user-select: text;
     outline:none;
 }
-
+.content-pullin{
+    padding:10px;
+}
 /*===== S 页面框架 =====*/
 .xpage,.xpage_inner{
     position:absolute;
@@ -1529,6 +1860,174 @@ input, textarea{
 }
 .hide{
     display: none!important;
+}
+.yue {
+    position: relative;
+    z-index: 1;
+}
+
+/* 修复顶部带有Fixed导航锚点定位不准确问题 */
+.yue h2,
+.yue h3,
+.yue h4,
+.yue h5,
+.yue h6 {
+    position: relative;
+/*    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding;
+    background-clip:padding-box;
+    border-top: 80px solid transparent;
+    margin-top: -70px; */
+}
+
+/* ==========================================================================
+   CSS 自动生成标题编号
+   ========================================================================== */
+
+/**
+ * 传统中文排版有『章』『节』『卷』『篇』『辑』『集』『部』等概念，
+ * 在网页排版中.yue.css 选取如下规则：
+ * 第1级--------章--------1
+ * 第2级--------节--------1.1
+ * 第3级--------节--------1.1.1
+ * 第4级--------节--------1.1.1.1
+ * -----------------------条--------1.
+ * -----------------------款--------1)
+ * -----------------------项--------(1)
+ * 所有标点均为西文标点
+ * 需要注意的是「条」比「章」后面多了「.」，「章」亦可用汉字代替，例如：「一、」
+ * Firefox 有私有属性分别实现简体和繁体的汉字编号，
+   -moz-simp-chinese-formal(大写)/-moz-simp-chinese-informal(小写)，
+   -moz-trad-chinese-formal(大写)/-moz-trad-chinese-informal(小写)，
+   参照：http://lists.w3.org/Archives/Public/public-html-ig-zh/2010Sep/0011.html
+   生成类似如下格式：
+
+   壹、章
+   ----壹之一、节
+   ----壹之二、节
+
+   贰、章
+   ----贰之一、节
+   ----贰之二、节
+   --------贰之二之一、节
+   --------贰之二之二、节
+
+ * @doc: 《科技文献的章节编号方法》（CY/T35-2001）
+ */
+
+.yue h2:before,
+.yue h3:before,
+.yue h4:before,
+.yue h5:before,
+.yue h6:before {
+    margin-right: .5em;
+    color: #888;
+}
+
+.yue {
+    counter-reset: chapter section subsection;
+}
+
+/* --------------------------------------------------------------------------
+   标题自动生成编号
+   -------------------------------------------------------------------------- */
+/**
+ * 提供从h2-h4 三个级别的标题序号
+ * 最终生成如下格式编号：
+        1.
+        1.1
+        1.1.1
+ * 或者在容器上加上 class="cjk"
+ * 将生成如下格式编号：
+        一、
+        1.1
+        1.1.1
+ */
+
+/**
+ * 一级标题（章）
+ * 输出 1
+ */
+.yue h2 {
+    counter-reset: section;
+}
+
+.yue h2:before {
+    content: counter(chapter);
+    counter-increment: chapter;
+}
+
+/**
+ * 一级标题(汉字)
+ * 输出 一、
+ */
+
+.cjk h2 {
+    counter-increment: section;
+}
+
+.cjk h2:before {
+    content: counter(chapter, cjk-ideographic)'、';
+    content: counter(chapter, cjk-cjk-decimal)'、';
+    margin-right: .25em;
+}
+
+/**
+ * 二级标题（节）
+ * 输出 1.1
+ */
+.yue h3 {
+    counter-reset: subsection;
+}
+
+.yue h3:before {
+    content: counter(chapter) "." counter(section);
+    counter-increment: section;
+}
+
+/**
+ * 三级标题（子节）
+ * 输出 1.1.1
+ */
+.yue h4:before {
+    content: counter(chapter) "." counter(section) "." counter(subsection);
+    counter-increment: subsection;
+}
+
+
+
+/**
+ * 移动端阅读优化
+ */
+
+@media (max-width: 800px) {
+    .yue {
+        font-size: 16px;
+    }
+}
+.hint{
+    background: #1f8dd6;
+    padding: 0.3em 1em;
+    border-radius: 2px;
+    color: #eee;
+    margin:10px;
+}
+.hint p{
+    margin-bottom:1px;
+    color:#eee;
+}
+.hint a{
+    color:#fff;
+}
+.hint-title{
+    border-bottom:1px solid #fff;
+    margin-bottom:5px;
+    padding-bottom:2px;
+}
+.hint-title .icon{
+    margin-right:4px;
+    font-size:22px;
+    vertical-align:-2px;
 }
 .supports3d .xo_page,.supports3d .xo_aside,.supports3d .xo_popup,.supports3d .xo_mask{
     -webkit-transform: translate3d(0, 0, 0) rotate(0) scale(1);
