@@ -16,16 +16,16 @@
             <div class="agenda">
                 <h3><span class="icon icon-list"></span>目录</h3>
                 <ol>
-                    <li><a href="#click-delay-s1" data-notrouter="true">300毫秒点击延迟的来历</a></li>
-                    <li><a href="#click-delay-s2" data-notrouter="true">浏览器开发商提供的解决方案</a></li>
-                    <li><a href="#click-delay-s3" data-notrouter="true">当前如何避免点击延迟</a></li>
-                    <li><a href="#click-delay-s4" data-notrouter="true">小结</a></li>
+                    <li><a href="#notrouter-click-delay-s1" data-notrouter>300毫秒点击延迟的来历</a></li>
+                    <li><a href="#notrouter-click-delay-s2" data-notrouter>浏览器开发商提供的解决方案</a></li>
+                    <li><a href="#notrouter-click-delay-s3" data-notrouter>当前如何避免点击延迟</a></li>
+                    <li><a href="#notrouter-click-delay-s4" data-notrouter>小结</a></li>
                 </ol>
             </div>
         </div>
 
         <div class="content-padded yue">
-            <h2 id="click-delay-s1">300 毫秒延迟的来历</h2>
+            <h2 id="notrouter-click-delay-s1">300 毫秒延迟的来历</h2>
             <p>这要追溯至 2007 年初。苹果公司在发布首款 iPhone 前夕，遇到一个问题 —— 当时的网站都是为大屏幕设备所设计的。于是苹果的工程师们做了一些约定，应对 iPhone 这种小屏幕浏览桌面端站点的问题。</p>
             <p>这当中最出名的，当属双击缩放(double tap to zoom)。这也是会有上述 300 毫秒延迟的主要原因。</p>
         
@@ -58,7 +58,7 @@
 
             <p><em>注：iOS Safari 还有一个鲜为人知的约定。用户可以在靠近屏幕顶部或底部约 1/4 范围内的区域双击来滚动页面内容。当你在一个放大了的页面内竖向滚动的时候，是否有过不小心将页面横向滚动的经历？双击滚动正是为解决这个问题而生的。尽管后续出现的移动端浏览器复制了双击缩放这一行为，它们并未复制双击滚动的行为。这是我们稍后将会讨论到的很重要的一点。</em></p>
 
-            <h2 id="click-delay-s2">浏览器开发商提供的解决方案</h2>
+            <h2 id="notrouter-click-delay-s2">浏览器开发商提供的解决方案</h2>
 
             <p>避免点击延迟，提供一个响应迅速的移动端浏览器，可以说这是浏览器开发商的当务之急（当然，苹果公司除外）。因此，开发商们提供了一些比较有意思的解决方案。</p>
 
@@ -140,7 +140,7 @@
 
             <p>好消息是，我们现在已经有一些指针事件的 polyfills 可以在项目中使用了。接下来我们将讨论当下可用的 polyfill 以及其他解决 300 毫秒延迟的方案。</p>
 
-            <h2 id="click-delay-s3">当前如何避免延迟</h2>
+            <h2 id="notrouter-click-delay-s3">当前如何避免延迟</h2>
 
             <p>尽管浏览器开发商针对 300 毫秒延迟问题提出了一些解决方案，但目前并没有简单通用的方案。不过，已经有好多开发者考虑过这一问题，并带来了一些基于 JavaScript 的跨平台解决方案。这些方案可以归为两类 —— 针对指针事件的 polyfill 和“快速点击 (fast click)”。</p>
 
@@ -184,7 +184,7 @@
 
             <p>实际上，这也是为什么在 <a href="http://www.kendoui.com/appchallenge.aspx">HTML5 Mobile Challenge</a> 中，我们制作的这个名为 cuteness 的应用，很难分辨出它到底是一个 web 应用还是原生应用。如果你是第一次听说，现在就可以在手机上打开 <a href="http://cuteness.io/">cuteness.io</a> 来体验一下。</p>
 
-            <h2 id="click-delay-s4">小结</h2>
+            <h2 id="notrouter-click-delay-s4">小结</h2>
 
             <p>尽管苹果公司创造的双击缩放行为，是一种在移动设备上访问桌面端站点的不错的解决方案，但随之引入的 300 毫秒点击延迟也成为了移动端网站让用户感觉卡顿的罪魁祸首之一。</p>
 

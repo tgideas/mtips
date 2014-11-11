@@ -2846,6 +2846,11 @@ XO('Router',function($,C){
                 });
             },
             showPage: function(pageId,viewId,param){
+                
+                if(pageId.indexOf('notrouter')===0){
+                    return;    
+                }
+
                 viewId = viewId||'index';
                 param= JSON.parse(param||'{}');
                 var aniName = (!this.linkClicked)?C.DEFAULT.ANIMATION_NONE:null,
@@ -2887,6 +2892,7 @@ XO('Router',function($,C){
 
     };
 });
+
 /**
  * Animation module
  */
