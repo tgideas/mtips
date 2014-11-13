@@ -1,0 +1,31 @@
+<div id="xoview-tip-video-transform-bug" class="xpage">
+    <header class="bar bar-nav">
+        
+        <a href="#home" data-back="home" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">video标签脱离文档流</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active">问题描述</a>
+            <a class="control-item">环境与频率</a>
+            <a class="control-item">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                video标签的父元素(祖辈元素)设置transform样式后，标签会脱离文档流
+            </div>
+            <div class="control-content sc">部分android机型</div>
+            <div class="control-content sc">避免使用transform，如果需要设置位移，可使用绝对定位加top/left代替</div>
+        </div>
+
+    </div>
+
+
+
+</div>

@@ -1753,7 +1753,7 @@ select {
 .card{
     box-shadow: 0 2px 5px rgba(0,0,0,.16),0 2px 5px rgba(0,0,0,.23);
     -webkit-box-shadow:0 2px 5px rgba(0,0,0,.16),0 2px 5px rgba(0,0,0,.23);
-    border-radius: 1px;
+    border-radius: 0;
     border: 0;
 }
 .bar{
@@ -1761,6 +1761,10 @@ select {
     box-shadow:0 1px 4px rgba(0,0,0,.23);
     -webkit-box-shadow:0 1px 4px rgba(0,0,0,.23);
 }
+.bar-nav{
+    background-color:#23232e;
+}
+.bar-nav .title{color:#fff;}
 .segmented-control{
     border-radius:0px;
 }
@@ -1791,6 +1795,19 @@ select {
 h1 .icon,h2 .icon,h3 .icon,h4 .icon{
     color:#777;
 }
+img{max-width:100%;}
+/*
+ * btn
+ * ****************/
+.btn-block{
+    border-radius:2px;
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow:0 2px 5px rgba(0,0,0,.2);
+}
+.btn-primary{
+    background-color:#1f8dd6;
+    border-color:#1f8dd6;
+}
 body{
     -webkit-text-size-adjust:100%;
     -webkit-user-select:none;
@@ -1814,6 +1831,15 @@ input, textarea{
 }
 .content-pullin{
     padding:10px;
+}
+.v-center{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
 }
 /*===== S 页面框架 =====*/
 .xpage,.xpage_inner{
@@ -2031,11 +2057,12 @@ input, textarea{
     }
 }
 .hint{
-    background: #1f8dd6;
+    background: #03a9f4;
     padding: 0.3em 1em;
-    border-radius: 2px;
     color: #eee;
-    margin:10px;
+    margin:15px 10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow:0 2px 5px rgba(0,0,0,.2);
 }
 .hint p{
     margin-bottom:1px;

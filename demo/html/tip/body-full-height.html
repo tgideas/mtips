@@ -1,8 +1,8 @@
-<div id="xoview-tip-android-2-3-keyframes" class="xpage">
+<div id="xoview-tip-body-full-height" class="xpage">
     <header class="bar bar-nav">
         
         <a href="#home" data-back="home" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
-        <h1 class="title">Android2.3.x keyframes动画问题</h1>
+        <h1 class="title">页面100%高度问题</h1>
     </header>
 
     <div class="bar bar-standard bar-header-secondary">
@@ -18,22 +18,20 @@
     <div class="content">
         <div class="card">
             <div class="control-content sc active">
-                animation动画不起作用
-            </div>
-            <div class="control-content sc">Android 2.3.x</div>
-            <div  class="control-content sc">
                 <p>
-                    100%要留一帧空出来。在100%之前写一个最后值 99%那里写。2.3系统的动画才会动。
+                body设置100%高度后，在移动浏览器里面可能会被底部的导航栏挡住:
+                </p>
+                <img src="assets/mtips/pic/body-full-height.png" alt="body full height"/>
+            </div>
+            <div class="control-content sc">各移动浏览器经常出现</div>
+            <div class="control-content sc">
+                <p>
+                    利用JS重置文档元素的高度：
                 </p>
                 <pre>
-                    <code class="code">
-@-webkit-keyframes wave1{
-    0%{ opacity:0;}
-    8.33%{ opacity:.8;}
-    99%{opacity:1;}
-    100%{}/* 空的一帧  */
-}
-                    </code>
+                <code class="code">
+document.documentElement.style.height = window.innerHeight + 'px'                
+                </code>
                 </pre>
             </div>
         </div>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+
+  <!--
+Copyright (c) 2014 by Chris Coyier (http://codepen.io/chriscoyier/pen/BkhFI)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+  <title>CodePen - A Pen by chriscoyier</title>
+
+  <style>
+  a {
+ display: block;
+ border: 1px solid black;
+ margin: 20px;
+ padding: 20px;
+ text-align: center;
+ font: bold 18px Sans-Serif;
+ color: #ccc;
+ position: relative;
+}
+a:first-child {
+  border: 0;
+  color: black; 
+}
+
+#animate:before, 
+#transition:before {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 20px;
+ height: 100%;
+ background: red; 
+}
+
+#transition:before {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#transition:hover,
+#transition:focus {
+  /* things won't work in IE 10 without this declaration */
+}
+#transition:hover:before,
+#transition:focus:before {
+ left: 100%;
+ margin-left: -20px;
+ background: green;
+}
+
+@keyframes move {
+ 0% { 
+   left: 0;
+   margin-left: 0;
+   background: red;
+ }
+ 100% {
+   left: 100%;
+   margin-left: -20px;
+   background: green;
+ }
+}
+
+#animate:before {
+  -webkit-animation: move 5s ease alternate infinite;
+  -moz-animation: move 5s ease alternate infinite;
+  -ms-animation: move 5s ease alternate infinite;
+  -o-animation: move 5s ease alternate infinite;
+  animation: move 5s ease alternate infinite;
+}
+  </style>
+
+  <script>
+    window.open    = function(){};
+    window.print   = function(){};
+    // Support hover state for mobile.
+    if (false) {
+      window.ontouchstart = function(){};
+    }
+  </script>
+
+    <script src="../../../assets/mtips/js/prefixfree.min-de773054e90c52a3c2631c944681b64e.js"></script>
+
+</head>
+
+<body>
+
+  <div>伪元素 Animation & Transition 测试</div>
+
+<a id="animate" href="javascript:;">Animation 测试</a>
+
+<a id="transition" href="javascript:;">Transition 测试 (请鼠标hover或手机触摸)</a>
+
+</body>
+
+</html>
+

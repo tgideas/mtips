@@ -1,0 +1,133 @@
+<div id="xoview-tip-pseudo-element-animation" class="xpage">
+    <header class="bar bar-nav">
+        
+        <a href="#home" data-back="home" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">伪类元素动画的兼容性</h1>
+    </header>
+
+    <div class="content">
+        <style>
+        .support-table img{width:80px;}
+        .supported{background:#81d567;}
+        .unsupported{background:#eee;}
+        </style>
+        <div class="hint">
+            <p>::after,::before这些伪元素的animation动画存在兼容性能问题，应慎用。</p>
+            <p>ios6.1及以下均不支持</p>
+        </div>
+        
+        <div class="content-padded yue">
+            <table class="support-table">
+                <tbody><tr>
+                <th rowspan="2">
+                    <img src="assets/mtips/pic/firefox-big.png" alt="firefox"/>      
+                </th>
+                <td class="unsupported">
+                              3.6 及以下
+                      </td>
+                <td class="unsupported">
+                              不支持
+                      </td>
+                </tr>
+                <tr>
+                <td class="supported end">
+                              4.0+
+                      </td>
+                <td class="supported end">
+                              支持
+                      </td>
+                </tr>
+                <tr>
+                <th rowspan="2">
+                    <img src="assets/mtips/pic/safari-big.png" alt="safari"/>      
+                </th>
+                <td class="unsupported">
+                              6.0.5 及以下
+                      </td>
+                <td class="unsupported">
+                              不支持 - <a href="https://bugs.webkit.org/show_bug.cgi?id=23209">bug report</a>
+                      </td>
+                </tr>
+                <tr>
+                <td class="supported end">
+                              6.1+
+                      </td>
+                <td class="supported end">
+                              支持
+                      </td>
+                </tr>
+                <tr>
+                <th rowspan="2">
+                    <img src="assets/mtips/pic/chrome-big.png" alt="chrome"/>       
+                </th>
+                <td class="unsupported end">
+                          25 及以下
+                       </td>
+                <td class="unsupported end">
+                           不支持
+                       </td>
+                </tr>
+                <tr>
+                <td class="supported end">
+                          26+
+                       </td>
+                <td class="supported end">
+                           支持 - <a href="http://trac.webkit.org/changeset/138632">2013年1月3日修正</a>
+                       </td>
+                </tr>
+                <tr>
+                <th rowspan="2">
+                    <img src="assets/mtips/pic/opera-big.png" alt="opera"/>       
+                </th>
+                <td class="unsupported">
+                          12.16 及以下
+                       </td>
+                <td class="unsupported">
+                           不支持                       
+                </td>
+                </tr>
+                <tr>
+                <td class="supported end">
+                          15+
+                       </td>
+                <td class="supported end">
+                           支持<br>
+                     </td></tr>
+                <tr>
+                <th rowspan="2">
+                    <img src="assets/mtips/pic/ie-big.png" alt="ie"/>       
+                </th>
+                <td class="unsupported end">
+                          9 及以下
+                       </td>
+                <td class="unsupported end">
+                           不支持
+                       </td>
+                </tr>
+                <tr>
+                <td class="supported end">
+                          10+
+                       </td>
+                <td class="supported end">
+                          支持 - 有点小bug <a href="http://css-tricks.com/pseudo-element-animationstransitions-bug-fixed-in-webkit/">这里提及</a>.
+                       </td>
+                </tr>
+                </tbody>
+            </table>       
+         </div>
+
+        <div class="content-padded">
+            <h4>示例</h4>
+        </div>
+        
+        <div class="card">
+            <iframe style="min-height:240px;" src="demo/html/tip/pseudo-element-animation-demo.html" seamless="true"></iframe>
+        </div>
+        <div class="content-padded">
+            <a class="btn btn-block btn-primary" data-notrouter="1" href="demo/html/tip/pseudo-element-animation-demo.html"><span class="icon icon-share"></span>新窗口打开Demo</a>
+        </div>
+    </div>
+
+
+
+</div>
