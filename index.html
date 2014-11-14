@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html manifest="i.appcache">
   <head>
     <meta charset="utf-8"/>
-    <title>TGIdeas - Mobile front-end dev tips</title>
+    <title>Mobi Tips - TGIdeas</title>
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
@@ -51,7 +51,8 @@
                 });
             });
             XO.App.init({
-                debug:true,
+                debug:false,
+                maxViewSizeInDom:4,
                 defaultAnimation:'none'
             });
             //applicationCache.addEventListener('cached', function(){ init(); });

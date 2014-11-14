@@ -7,26 +7,33 @@
         .brand-logo{position:absolute;top:100%;margin-top:-75px;left:50%;margin-left:-75px;}
         .brand-logo img{width:150px;height:150px;padding:2px;background:#000;border-radius:50%;-webkit-border-radius:50%;}
         .cate-title{margin-top:95px;font-size:24px;color:#333;}
-        .cate-list{list-style:none;padding:0;margin:.8em 0;}
-        .cate-list a{display:inline-block;height:34px;line-height:32px;}
+        .cate-subtitle{padding-left:10px;padding-right:10px;}
+        .cate-list{transition:all .25s ease-out;}
     </style>
     <div class="brand">
-        <div class="brand-logo">
+        <div class="brand-logo" id="brandLogo">
             <img src="assets/mtips/pic/logo.png" alt="Mobi Webdev Handbook"/>
         </div>
     </div>
 
     <div class="cate">
         <h1 class="cate-title">Mobi Webdev Handbook</h1>
-        <p class="cate-subtitle">共收集了<span class="badge badge-primary">20+</span>问题与技巧</p>
-        <ol class="cate-list">
-            <li><a href="#home/list1">Appearance</a></li>
-            <li><a href="#home/list2">Behavior</a></li>
-        </ol>
+        <p class="cate-subtitle">一个基于<a href="http://github.com/xsin/xo">XO.JS</a> WebApp框架的移动前端开发手册，目前共收集了<span class="badge badge-primary">20+</span>问题与技巧。</p>
+        <ul id="cateList" class="table-view cate-list">
+            <li class="table-view-cell"><a class="navigate-right" href="#home/list1">Appearance</a></li>
+            <li class="table-view-cell"><a class="navigate-right" href="#home/list2">Behavior</a></li>
+        </ul>
         <p class="fav-links">
         <iframe src="//ghbtns.com/github-btn.html?user=tgideas&amp;repo=mtips&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
         </p>
     </div>
+
+    <script>
+        var $list = $("#cateList");
+        $("#brandLogo").on("click",function(e){
+            $list.toggleClass('callout');
+        });
+    </script>
 
 </div>
 

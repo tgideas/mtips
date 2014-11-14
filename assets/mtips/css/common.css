@@ -28,3 +28,9 @@ iframe{border:0;background:#fff;max-width:100%;}
     margin-top:6px;
     border:2px solid #000;
 }
+.callout{
+    box-shadow: 0 2px 5px rgba(0,0,0,.2),0 2px 5px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2),0 2px 5px rgba(0,0,0,.3);
+    border-radius: 0;
+    border: 0;
+}
