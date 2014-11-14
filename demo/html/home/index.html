@@ -8,7 +8,8 @@
         .brand-logo img{width:150px;height:150px;padding:2px;background:#000;border-radius:50%;-webkit-border-radius:50%;}
         .cate-title{margin-top:95px;font-size:24px;color:#333;}
         .cate-subtitle{padding-left:10px;padding-right:10px;}
-        .cate-list{transition:all .25s ease-out;}
+        .cate-list{list-style:none;transition:all .25s ease-out;border-top:1px solid #ddd;padding:5px 0 0 0;margin:.8em 0;}
+        .cate-list a{display:block;height:32px;line-height:32px;}
     </style>
     <div class="brand">
         <div class="brand-logo" id="brandLogo">
@@ -18,13 +19,13 @@
 
     <div class="cate">
         <h1 class="cate-title">Mobi Webdev Handbook</h1>
-        <p class="cate-subtitle">一个基于<a href="http://github.com/xsin/xo">XO.JS</a> WebApp框架的移动前端开发手册，目前共收集了<span class="badge badge-primary">20+</span>问题与技巧。</p>
-        <ul id="cateList" class="table-view cate-list">
-            <li class="table-view-cell"><a class="navigate-right" href="#home/list1">Appearance</a></li>
-            <li class="table-view-cell"><a class="navigate-right" href="#home/list2">Behavior</a></li>
+        <p class="cate-subtitle">基于<a href="http://github.com/xsin/xo">XO.JS</a>，共收集<span class="badge badge-primary">20+</span>问题与技巧。</p>
+        <ul id="cateList" class="cate-list">
+            <li><a href="#home/list1">Appearance</a></li>
+            <li><a href="#home/list2">Behavior</a></li>
         </ul>
         <p class="fav-links">
-        <iframe src="//ghbtns.com/github-btn.html?user=tgideas&amp;repo=mtips&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        <iframe src="//ghbtns.com/github-btn.html?user=tgideas&amp;repo=mtips&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
         </p>
     </div>
 

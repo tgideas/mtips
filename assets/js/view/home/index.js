@@ -1,7 +1,7 @@
 XO.View.define({
     pid:'home',
     vid:'index',
-    version:'20141114',
+    version:'20141114.2',
     init:function(){
         XO.warn('View inited:'+this.id);
         $(document).on('click','.segmented-control .control-item',function(e){
