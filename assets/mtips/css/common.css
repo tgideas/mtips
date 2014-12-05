@@ -19,7 +19,9 @@
 
 body{min-width:200px;background:#efefef;}
 .sc{padding:10px;min-height:62px;}
-iframe{border:0;background:#fff;max-width:100%;}
+.iframe{position:relative;z-index:1;border:0;background:#fff;max-width:100%;width:100%;}
+.iframe-wrap{position:relative;}
+.iframe-cover{position:absolute;z-index:2;top:0;left:0;width:100%;bottom:0;}
 .bar-nav .logo{
     width:32px;
     height:32px;
@@ -34,3 +36,4 @@ iframe{border:0;background:#fff;max-width:100%;}
     border-radius: 0;
     border: 0;
 }
+.CodeMirror{height:auto !important;min-height:200px;}

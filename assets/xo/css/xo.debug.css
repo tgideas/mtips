@@ -1751,10 +1751,11 @@ select {
   }
 }
 .card{
-    box-shadow: 0 2px 5px rgba(0,0,0,.16),0 2px 5px rgba(0,0,0,.23);
-    -webkit-box-shadow:0 2px 5px rgba(0,0,0,.16),0 2px 5px rgba(0,0,0,.23);
+    box-shadow: 0 0px 2px rgba(0,0,0,.15);
+    -webkit-box-shadow:0 0px 2px rgba(0,0,0,.15);
     border-radius: 0;
-    border: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    margin:15px 10px;
 }
 .bar{
     border-bottom:0;

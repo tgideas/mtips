@@ -1,0 +1,61 @@
+<div id="xoview-tip-event-delegation-not-work" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list1" data-back="home/list1" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">非a标签点击事件失效</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active">问题描述</a>
+            <a class="control-item">环境与频率</a>
+            <a class="control-item">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                <textarea class="code" data-cmlang="htmlmixed">
+<span class="span_1">span_1</span>
+<span class="span_2">span_2</span>
+<div class="dv_1">dv_1</div>
+<a href="javascript:;" class="a_1">a_1</a>
+<script>
+document.addEventListener('click', function(e) {
+    alert('bind document e.target.id = '+e.target.id);
+},false); 
+</script>
+                </textarea>               
+                
+                <p>
+                    上面的代码在ios下点击 span_1, span_2, dv_1 都没有弹出框。
+                </p>
+            </div>
+            <div class="control-content sc">ios</div>
+            <div class="control-content sc">
+                <p>在标签上加onclick属性</p>
+                <textarea class="code" data-cmlang="htmlmixed">
+ <span id="span_1" onclick="javascript:void(0)">span_1</span>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="content-padded"><h4>示例</h4></div>
+        <div class="content-padded">
+            <div id="ednwDemo">
+                <span id="span_1">span_1</span>
+                <span id="span_2">span_2</span>
+                <div id="dv_1">dv_1</div>
+                <a href="javascript:;" id="a_1">a_1</a>
+            </div>
+            <script>
+            document.getElementById('ednwDemo').addEventListener('click', function(e) {
+                alert('bind document e.target.id = '+e.target.id);
+            },false);       
+            </script>
+        </div>
+
+    </div>
+</div>

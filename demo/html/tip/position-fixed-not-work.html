@@ -1,0 +1,39 @@
+<div id="xoview-tip-position-fixed-not-work" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list1" data-back="home/list1" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">position fixed失效</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active">问题描述</a>
+            <a class="control-item">环境与频率</a>
+            <a class="control-item">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                <div class="yue">
+                <blockquote>
+A transformed element creates a containing block even for descendants that have been set to position: fixed.  In other words, the containing block for a fixed-position descendant of a transformed element is the transformed element, not the viewport.  Furthermore, if the transformed element is in the normal flow, it will scroll with the document and the fixed-position descendants will scroll with it.                                                        
+                </blockquote>
+                <p>
+如果一个应用了css3 transform的元素里面包含fixed定位的元素，在webkit核心的浏览器下，该fixed定位的元素会失效，其实际定位效果类似绝对定位，会跟着滚动条的滚动而滚动！                                 
+                </p>
+                </div>
+            </div>
+            <div class="control-content sc">ios</div>
+            <div class="control-content sc">
+               避免在应用了css3 transform的元素内部嵌套fixed定位的元素。 
+            </div>
+        </div>
+        <div class="content-padded" style="min-height:60px;">
+            <div class="hint" style="position:fixed;left:0;right:0;bottom:0;">我是绝对定位的元素!!</div>
+        </div>
+
+    </div>
+</div>
