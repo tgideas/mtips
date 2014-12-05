@@ -2,13 +2,8 @@ CACHE MANIFEST
 # v1 - 20141219
 # Explicitly cached 'master entries'
 CACHE:
-assets/codemirror/lib/codemirror.css
-assets/codemirror/theme/monokai.css
-assets/codemirror/lib/codemirror.js
-assets/codemirror/mode/xml/xml.js
-assets/codemirror/mode/htmlmixed/htmlmixed.js
-assets/codemirror/mode/javascript/javascript.js
-assets/codemirror/mode/css/css.js
+http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css
+http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js
 assets/mtips/fonts/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff
 assets/mtips/fonts/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff
 assets/mtips/fonts/lato/v11/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest1="i.appcache">
+<html manifest="i.appcache">
   <head>
     <meta charset="utf-8"/>
     <title>Mobi Tips - TGIdeas</title>
@@ -22,13 +22,9 @@
     <link href="assets/xo/css/xo.min.css" rel="stylesheet"/>
     <link href="assets/mtips/css/common.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css"/>
-    <link rel="stylesheet" href="assets/codemirror/theme/monokai.css"/>
-    <script src="assets/codemirror/lib/codemirror.js"></script>
-    <script src="assets/codemirror/mode/xml/xml.js"></script>
-    <script src="assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script src="assets/codemirror/mode/javascript/javascript.js"></script>
-    <script src="assets/codemirror/mode/css/css.js"></script>
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 
   </head>
   <body data-viewdir="demo/html/">
@@ -51,11 +47,7 @@
         $(document).ready(function(){
             XO.Event.on(XO.EVENT.View.Inited,function(e,view){
                 view.$el.find('.code').each(function(i, block) {
-                    CodeMirror.fromTextArea(block,{
-                        theme:'monokai',
-                        readOnly:true,
-                        mode:block.getAttribute('data-cmlang')||'htmlmixed'
-                    });
+                    hljs.highlightBlock(block);
                 });
             });
             XO.App.init({

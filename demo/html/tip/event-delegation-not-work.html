@@ -17,18 +17,19 @@
     <div class="content">
         <div class="card">
             <div class="control-content sc active">
-                <textarea class="code" data-cmlang="htmlmixed">
-<span class="span_1">span_1</span>
-<span class="span_2">span_2</span>
-<div class="dv_1">dv_1</div>
-<a href="javascript:;" class="a_1">a_1</a>
-<script>
+                <pre>
+                <code class="code">
+&lt;span class="span_1"&gt;span_1&lt;/span&gt;
+&lt;span class="span_2"&gt;span_2&lt;/span&gt;
+&lt;div class="dv_1"&gt;dv_1&lt;/div&gt;
+&lt;a href="javascript:;" class="a_1"&gt;a_1&lt;/a&gt;
+&lt;script&gt;
 document.addEventListener('click', function(e) {
     alert('bind document e.target.id = '+e.target.id);
 },false); 
-</script>
-                </textarea>               
-                
+&lt;/script&gt;
+                </code>               
+                </pre>        
                 <p>
                     上面的代码在ios下点击 span_1, span_2, dv_1 都没有弹出框。
                 </p>
@@ -36,19 +37,24 @@ document.addEventListener('click', function(e) {
             <div class="control-content sc">ios</div>
             <div class="control-content sc">
                 <p>在标签上加onclick属性</p>
-                <textarea class="code" data-cmlang="htmlmixed">
- <span id="span_1" onclick="javascript:void(0)">span_1</span>
-                </textarea>
+                <pre>
+                <code class="code">
+ &lt;span id="span_1" onclick="javascript:void(0)"&gt;span_1&lt;/span&gt;
+                </code>
+                </pre>
             </div>
         </div>
 
         <div class="content-padded"><h4>示例</h4></div>
         <div class="content-padded">
             <div id="ednwDemo">
-                <span id="span_1">span_1</span>
-                <span id="span_2">span_2</span>
-                <div id="dv_1">dv_1</div>
-                <a href="javascript:;" id="a_1">a_1</a>
+                <style>
+                .ednw-badge{display:block;padding:10px;margin-bottom:10px;background:#eee;border:1px solid #ddd;}
+                </style>
+                <span class="ednw-badge" id="span_1">span_1</span>
+                <span class="ednw-badge" id="span_2">span_2</span>
+                <div id="dv_1" class="ednw-badge">dv_1</div>
+                <a href="javascript:;" id="a_1" class="ednw-badge">a_1</a>
             </div>
             <script>
             document.getElementById('ednwDemo').addEventListener('click', function(e) {
