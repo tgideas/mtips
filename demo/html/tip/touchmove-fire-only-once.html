@@ -1,0 +1,52 @@
+<div id="xoview-tip-touchmove-fire-only-once" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list1" data-back="home/list1" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">touchmove只执行一次</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active">问题描述</a>
+            <a class="control-item">环境与频率</a>
+            <a class="control-item">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                <div class="yue">
+                <blockquote>
+
+                touchmove events in Android web browsers have a really serious bug. If you don't include the following code, the touchmove event will fire once, but not again until you're done moving your touch, which utterly kills the usefulness of the touchmove event. It's a weird one, and may very well break more advanced touch logic that works on iOS. But if you preventDefault() on the touchstart event, your touchmove will function as expected.
+                                                        
+                </blockquote>
+                <p>
+                在android里面，每一次滑动操作可能只会触发一次touchmove事件。一些依赖滚屏的交互逻辑因此变得难以实现。
+                </p>
+                </div>
+            </div>
+            <div class="control-content sc">android</div>
+            <div class="control-content sc">
+            
+                <p>
+                    在touchstart事件回调里面抑制默认事件
+                </p>
+                <pre>
+                <code class="code">
+element.addEventListener( "touchstart", function(e){ onStart(e); }, false );
+function onStart ( touchEvent ) {
+    if( navigator.userAgent.match(/Android/i) ) {
+        touchEvent.preventDefault();
+    }
+}
+                </code>
+                </pre>
+            
+            </div>
+        </div>
+
+    </div>
+</div>

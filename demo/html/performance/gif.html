@@ -1,0 +1,35 @@
+<div id="xoview-performance-gif" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list3" data-back="home/list1" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">gif动画的性能影响</h1>
+    </header>
+
+    <div class="bar bar-standard bar-header-secondary">
+
+        <div class="segmented-control">
+            <a class="control-item active">问题描述</a>
+            <a class="control-item">环境与频率</a>
+            <a class="control-item">解决办法</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <div class="control-content sc active">
+                <div class="yue">
+                    <h3>Chrome开发者工具timeline测试结果</h3>
+                    <p>当页面没有做任何操作的时候，timeline中会重复出现：<b>Rasterize</b>, <b>Paint</b>, <b>Composite Layers</b>，而且gif越多性能消耗越大。</p>
+                    <img src="assets/mtips/pic/gif-timeline.png" alt="gif-timeline"/>
+                </div>
+            </div>
+            <div class="control-content sc">全平台</div>
+            <div class="control-content sc">
+            
+                避免使用gif动画，可利用css3动画、图片帧动画代替之。
+                            
+            </div>
+        </div>
+
+    </div>
+</div>

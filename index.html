@@ -47,6 +47,7 @@
         $(document).ready(function(){
             XO.Event.on(XO.EVENT.View.Inited,function(e,view){
                 view.$el.find('.code').each(function(i, block) {
+                    block.innerHTML = block.innerHTML.replace(/</g,'&lt;').replace(/>/g,'&gt;');
                     hljs.highlightBlock(block);
                 });
             });
