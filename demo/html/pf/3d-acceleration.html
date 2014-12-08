@@ -1,0 +1,37 @@
+<div id="xoview-pf-3d-acceleration" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list3" data-back="home/list3" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">GPU加速的性能影响</h1>
+    </header>
+
+    <div class="content">
+        <div class="card">
+            <div class="yue content-padded">
+                <h3>开启GPU加速的方法</h3>
+                <ol>
+                    <li>-webkit-backface-visibility: hidden;</li>
+                    <li>-webkit-transform: translate3d(0, 0, 0);</li>
+                    <li>-webkit-transform-style: preserve-3d;</li>
+                    <li>-webkit-transform: translateZ(0);</li>
+                    <li>iframe浏览器默认是开启3d加速的</li>
+                </ol>
+                <h3>一个测试</h3>
+                <pre>
+                <code class="code">
+_drag.style.webkitTransform = "translate3D(" + _drag._x + "px," + _drag._y + "px,0px)";
+_drag.style.webkitTransform = "translate(" + _drag._x + "px," + _drag._y + "px)";
+                </code>
+                </pre>
+                <p>这是一个简单的拖动代码,区别仅仅是一个开启3d，一个没有。</p>
+                <img src="assets/mtips/pic/pf-gpu.png" alt="gpu acceleration"/>
+                <h3>结论</h3>
+                <p>
+                没开启GPU加速的拖拽操作，会频繁发生布局（layout）、Paint（绘制）；开启GPU加速后，布局、绘制后的图层会被缓存起来复用；这是为什么GPU加速的动画比普通动画顺畅的原因。
+                </p>
+                <h3>但是</h3>
+                <p>图层的缓存会消耗内存，一个页面过多的元素使用GPU加速，性能同样会存在问题。GPU加速要根据项目需要适量使用。</p>
+            </div>
+        </div>
+
+    </div>
+</div>

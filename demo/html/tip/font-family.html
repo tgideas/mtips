@@ -1,0 +1,53 @@
+<div id="xoview-tip-font-family" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list1" data-back="home/list1" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">字体设置建议</h1>
+    </header>
+
+    <div class="content">
+        <div class="card">
+            <pre>
+                <code class="code">
+body {
+        font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+                </code>
+            </pre>           
+            <div class="yue content-padded">
+
+                <h3>字体设置</h3>
+
+                <p>iOS 4.0+ 使用英文字体 Helvetica Neue，之前的iOS版本降级使用 Helvetica。</p>
+
+                <p>中文字体设置为华文黑体STHeiTi。</p>
+
+                <p>需补充说明，华文黑体并不存在iOS的字体库中(<a href="http://support.apple.com/kb/HT5484?viewlocale=en_US)%EF%BC%8C">http://support.apple.com/kb/HT5484?viewlocale=en_US)，</a>
+                但系统会自动将华文黑体STHeiTi兼容命中系统默认中文字体黑体-简或黑体-繁：</p>
+
+                <pre><code>
+Heiti SC Light 黑体-简 细体
+Heiti SC Medium 黑体-简 中黑
+Heiti TC Light 黑体-繁 细体
+Heiti TC Medium 黑体-繁 中黑
+                </code></pre>
+
+                <p>原生Android下中文字体与英文字体都选择默认的无衬线字体。</p>
+
+                <p>4.0之前版本英文字体原生Android使用的是Droid Sans，中文字体原生Android会命中Droid Sans Fallback。</p>
+
+                <p>4.0+ 中英文字体都会使用原生Android新的Roboto字体。</p>
+
+                <p>其他第三方Android系统也一致选择默认的无衬线字体。</p>
+
+                <h3>
+                    参考阅读</h3>
+
+                <ul class="task-list">
+                    <li><a href="http://en.wikipedia.org/wiki/Droid_fonts">Droid, the default font for older versions of Android</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/Roboto">Roboto, the default font for newer versions of Android</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div id="xoview-pf-box-shadow" class="xpage">
+    <header class="bar bar-nav">
+        <a href="#home/list3" data-back="home/list3" class="btn btn-link btn-nav pull-left"><span class="icon icon-left-nav"></span></a>
+        <h1 class="title">box-shadow性能全解</h1>
+    </header>
+
+    <div class="content">
+        <div class="card">
+            <div class="yue content-padded">
+                <h3>一个测试</h3>
+                <p>测试机（MI2），测试方式chrome调试手机，并开启Enable continuous page repainting。</p>
+                <p>最后两条测试条件为15个宽高都为100px的div，其他为50个宽高为100px的div</p>
+                <img src="assets/mtips/pic/pf-box-shadow.png" alt="box-shadow"/>
+                <h3>结论</h3>
+                <ol>
+                    <li>性能消耗和阴影大小，作用元素大小，个数成正比。</li>
+                    <li>偏移对性能影响不大。</li>
+                    <li>如果阴影的透明度为0则性能没有影响。</li>
+                </ol> 
+                <h3>使用建议</h3>
+                <ol>
+                    <li>大型元素的阴影可以考虑用图片代替</li>
+                    <li>减少阴影的使用，或降低数值。</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</div>

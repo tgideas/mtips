@@ -36,3 +36,7 @@ body{min-width:200px;background:#efefef;}
     border-radius: 0;
     border: 0;
 }
+
+/* yue.css overwrite, we use highlight.js to pretify our code */
+.yue pre{background:transparent;border-left:none;padding:0;padding-left:0;}
+.yue pre code{background:#23241f;}
