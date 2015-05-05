@@ -94,7 +94,7 @@ Mbug is a bug list for front-end development of mobile
    问题描述：内嵌浏览器的ready跟我们jq或者zoto提供的方法不一样，不通用
    测试环境：内嵌浏览器
    解决办法：
-`
+ <pre>
 var inter=setInterval(function(){
 	if ($win.width()){
 			//你的代码				
@@ -103,7 +103,7 @@ var inter=setInterval(function(){
 
 	}
 },10);
-`
+</pre>
 ### ## margin-top百分比值不正确
 
    问题描述：当元素position:absolute的时候，margin-top用百分比，它的值和top用百分比的值是一样的。正确的应该是margin-top用百分比的时候等于宽乘百分比。
