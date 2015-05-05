@@ -94,7 +94,7 @@ Mbug is a bug list for front-end development of mobile
    问题描述：内嵌浏览器的ready跟我们jq或者zoto提供的方法不一样，不通用
    测试环境：内嵌浏览器
    解决办法：
-   `
+`
 var inter=setInterval(function(){
 	if ($win.width()){
 			//你的代码				
