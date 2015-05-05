@@ -88,3 +88,26 @@ Mbug is a bug list for front-end development of mobile
    问题描述：<video>标签的父元素(祖辈元素)设置transform样式后，<video>标签会脱离文档流
    测试环境：部分android机型
    解决办法：不使用transform属性。translate用top、margin等属性替代
+
+### ## 初始化页面时获取不到宽高
+
+   问题描述：内嵌浏览器的ready跟我们jq或者zoto提供的方法不一样，不通用
+   测试环境：内嵌浏览器
+   解决办法：
+   `
+var inter=setInterval(function(){
+	if ($win.width()){
+			//你的代码				
+		clearInterval(inter);
+		
+
+	}
+},10);
+`
+### ## margin-top百分比值不正确
+
+   问题描述：当元素position:absolute的时候，margin-top用百分比，它的值和top用百分比的值是一样的。正确的应该是margin-top用百分比的时候等于宽乘百分比。
+   测试环境：安卓里手机QQ浏览器和微信里所用的X5内核
+   解决办法：规避
+
+
