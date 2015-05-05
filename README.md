@@ -97,10 +97,8 @@ Mbug is a bug list for front-end development of mobile
  <pre>
 var inter=setInterval(function(){
 	if ($win.width()){
-			//你的代码				
+		//你的代码				
 		clearInterval(inter);
-		
-
 	}
 },10);
 </pre>
