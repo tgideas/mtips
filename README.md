@@ -102,10 +102,30 @@ var inter=setInterval(function(){
 	}
 },10);
 </pre>
-### ## margin-top百分比值不正确
-
-   问题描述：当元素position:absolute的时候，margin-top用百分比，它的值和top用百分比的值是一样的。正确的应该是margin-top用百分比的时候等于宽乘百分比。
-   测试环境：安卓里手机QQ浏览器和微信里所用的X5内核
-   解决办法：规避
-
-
+### ## 不同单位在手机端不能用
+   问题描述：如100%在手机端展现不一致
+   测试环境：/
+   解决办法：100% -> 100px
+### ## webkit与标准颜色渐变方向相差90度
+   问题描述：webkit与标准颜色渐变方向相差90度 background:-webkit-linear-gradient(0deg,#3d86c8,rgba(61,134,200,0) 25%,rgba(61,134,200,0) 75%,#3d86c8);background:linear-gradient(90deg,#3d86c8,rgba(61,134,200,0) 25%,rgba(61,134,200,0) 75%, #3d86c8);
+   测试环境：/
+### ## flexbox子元素settimeout不渲染
+   问题描述：flexbox子元素settimeout不渲染
+   测试环境：/
+   解决办法：/ 
+### ## 子元素水平浮动 height:100% 计算有误
+   问题描述：子元素水平浮动 height:100% 计算有误
+   测试环境：QQ浏览器 
+   解决办法：/ 
+### ## canvas toDataURL导出数据失败
+   问题描述：canvas toDataURL导出数据失败
+   测试环境：QQ浏览器 
+   解决办法：/ 
+### ## touchmove阻止冒泡，底层元素touchend也不会执行
+   问题描述：touchmove阻止冒泡，底层元素touchend也不会执行
+   测试环境：/
+   解决办法：/ 
+### ##  QQ浏览器引入js文件缓存
+   问题描述： QQ浏览器引入js文件缓存
+   测试环境：android QQ浏览器
+   解决办法：/ 
