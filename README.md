@@ -35,7 +35,7 @@ Mbug is a bug list for front-end development of mobile
 
    环境与频率：部分android机型
 
-   解决办法：给该元素一个样式 -webkit-tap-highlight-color:Ωrgba(0,0,0,0);
+   解决办法：给该元素一个样式 -webkit-tap-highlight-color:rgba(0,0,0,0);
    
 ### ## 事件无法被触发
 
